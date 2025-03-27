@@ -7,7 +7,22 @@ import Score from "./components/Score.jsx"
 import TenseChoice from "./components/TenseChoice.jsx"
 import ShowWrongVerbs from "./components/ShowWrongVerbs.jsx"
 import { Howl } from "howler";
-import Logo  from "/img/logo.png"
+import Logo from "/img/logo.png"
+import styled from 'styled-components';
+
+
+
+const responsiveParagraph = styled.p`
+  font-size: 18px; /* Default for computers */
+
+  @media (max-width: 1024px) {
+    font-size: 16px; /* For iPads */
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px; /* For mobile devices */
+  }
+  `;
 
 
 
@@ -18,6 +33,8 @@ function App() {
   const [score, setScore] = useState(0)
   const [isPastTense, setIsPastTense] = useState(false)
   const [wrongVerbs, setWrongVerbs] = useState([])
+
+  
   
  
   const LOGO_SIZE = "40"
@@ -127,7 +144,7 @@ function App() {
   }
 
   return (
-    <>
+    <div style={{width: "100vw", margin: "auto", padding: "0 40px"}}>
       <a href="mailto:sesaemdeutsch@gmail.com?subject=강변화동사%20훈련장%20Render">
         <p style={{ fontSize: ".7rem", marginBottom: "50px" }}><img src={Logo} width={LOGO_SIZE} height={LOGO_SIZE} alt="logo 쎄쌤" style={{ marginRight: "15px", transform: "translateY(5px)" }} />
           &copy; 2025 쎄쌤독일어
@@ -145,21 +162,26 @@ function App() {
       )}
       {(!begun && <><TenseChoice isPastTense={isPastTense} setIsPastTense={setIsPastTense} /><button onClick={clickButton} className="enterTrainingGroundButton">강변화동사 훈련장에 입장하기</button></>)}
       {(begun && <ShowWrongVerbs wrongVerbs={wrongVerbs} />)}
-      <p style={{
-        position: "sticky", textAlign: "center", bottom: "2.5vh", left: "10 % ", right: "10% ", color: "grey" }}>
-      Sound & Music Attribution:
-      <br />
-        <span>
-          <p style={{ fontSize: ".5rem", lineHeight: ".7rem", color: "grey" }}>
-            8-bit game-over by KSAplay -- https://freesound.org/s/758954/ -- License: Creative Commons 0 <br />
-            8BIT Race music.mp3 by NYAN_CAT -- https://freesound.org/s/277363/ -- License: Attribution NonCommercial 3.0 <br />
-            Short loop made in a few minutes with QWS and GoldWave by sonically_sound -- https://freesound.org/s/647908/ -- License: Attribution NonCommercial 4.0 <br />
-            Hitting the enter key on a keyboard by pfranzen -- https://freesound.org/s/391310/ -- License: Attribution 4.0 <br />
-            Action01.wav by Jessariah -- https://freesound.org/s/435300/ -- License: Creative Commons 0 <br />
-          </p>
-        </span>
-      </p>
-    </>
+      <div style={{margin: "auto",  bottom: "1vh", width: "60vw",  backgroundColor: "transparent"}}>
+        <p style={{
+          color: "grey",
+          textAlign: "left",
+          backgroundColor: "transparent"
+        }}>
+        Sound & Music Attribution:
+        <br />
+          <div style={{backgroundColor: "transparent"}}>
+            <p style={{ fontSize: ".5rem", lineHeight: ".7rem", textAlign: "left", color: "grey", backgroundColor: "transparent" }}>
+              8-bit game-over by KSAplay -- https://freesound.org/s/758954/ -- License: Creative Commons 0 **
+              8BIT Race music.mp3 by NYAN_CAT -- https://freesound.org/s/277363/ -- License: Attribution NonCommercial 3.0 **
+              Short loop made in a few minutes with QWS and GoldWave by sonically_sound -- https://freesound.org/s/647908/ -- License: Attribution NonCommercial 4.0 **
+              Hitting the enter key on a keyboard by pfranzen -- https://freesound.org/s/391310/ -- License: Attribution 4.0 **
+              Action01.wav by Jessariah -- https://freesound.org/s/435300/ -- License: Creative Commons 0 **
+            </p>
+          </div>
+        </p>
+      </div>
+    </div>
   );
 }
 
