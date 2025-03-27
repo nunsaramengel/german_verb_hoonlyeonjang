@@ -128,7 +128,11 @@ function App() {
 
   return (
     <>
-      <p style={{fontSize: ".7rem", marginBottom: "50px"}}><img src={Logo} width={LOGO_SIZE} height={LOGO_SIZE} alt="logo 쎄쌤" style={{marginRight: "15px", transform: "translateY(5px)"}} />2010-2025 Copyright 쎄쌤독일어</p>
+      <a href="mailto:sesaemdeutsch@gmail.com?subject=강변화동사%20훈련장%20Render">
+        <p style={{ fontSize: ".7rem", marginBottom: "50px" }}><img src={Logo} width={LOGO_SIZE} height={LOGO_SIZE} alt="logo 쎄쌤" style={{ marginRight: "15px", transform: "translateY(5px)" }} />
+          &copy; 2025 쎄쌤독일어
+        </p>
+      </a>
       {(begun && (<><h1>강변화동사 훈련장</h1><Score score={score} /></>))} 
       {currentVerb && <Verb question={currentVerb} isPastTense={isPastTense}></Verb>} {/* Render Verb only if currentVerb is not null */}
       {currentVerb && (
