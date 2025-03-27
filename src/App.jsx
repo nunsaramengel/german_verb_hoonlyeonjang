@@ -141,11 +141,12 @@ function App() {
       )}
       {(!begun && <><TenseChoice isPastTense={isPastTense} setIsPastTense={setIsPastTense} /><button onClick={clickButton} className="enterTrainingGroundButton">강변화동사 훈련장에 입장하기</button></>)}
       {(begun && <ShowWrongVerbs wrongVerbs={wrongVerbs} />)}
-      <p style={{ position: "absolute", textAlign: "center", bottom: "2.5vh", left: "10%", right: "10%" }}>
+      <p style={{
+        position: "sticky", textAlign: "center", bottom: "2.5vh", left: "10 % ", right: "10% ", color: "grey" }}>
       Sound & Music Attribution:
       <br />
         <span>
-          <p style={{ fontSize: ".5rem", lineHeight: ".7rem" }}>
+          <p style={{ fontSize: ".5rem", lineHeight: ".7rem", color: "grey" }}>
             8-bit game-over by KSAplay -- https://freesound.org/s/758954/ -- License: Creative Commons 0 <br />
             8BIT Race music.mp3 by NYAN_CAT -- https://freesound.org/s/277363/ -- License: Attribution NonCommercial 3.0 <br />
             Short loop made in a few minutes with QWS and GoldWave by sonically_sound -- https://freesound.org/s/647908/ -- License: Attribution NonCommercial 4.0 <br />
