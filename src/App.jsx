@@ -139,7 +139,7 @@ function App() {
   const handleIncorrectAnswer = () => {
     setScore(prevScore => Math.max(prevScore - SUBSTRACT_POINTS, 0))
     playSound(wrong)
-    setWrongVerbs(prev => [...prev, currentVerb.infinitive])
+    setWrongVerbs(prev => [...prev, currentVerb])
     clickButton()
   }
 

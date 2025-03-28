@@ -25,16 +25,16 @@ const ResponseField = ({
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div style={{width: "100vw"}}>
+      <form onSubmit={handleSubmit} style={{width: "90vw"}}>
         <input
           type="text"
           value={userInput}
           onChange={handleChange}
-          style={{ width: "20vw", fontFamily: "yoon-px-pixelbatang, sans-serif" }}
+          style={{ width: "70vw", fontFamily: "yoon-px-pixelbatang, sans-serif" }}
           lang="de"
         />
-        <button className="checkVerbButton" type="submit" style={{width: "15vw", transform: "translate(-22px, -2px)", fontFamily: "yoon-px-pixelbatang, sans-serif"}} lang="ko">검사</button>
+        <button className="checkVerbButton" type="submit" style={{width: "70vw",  fontFamily: "yoon-px-pixelbatang, sans-serif"}} lang="ko">검사</button>
       </form>
       {message && <p lang="ko">{message}</p>}
     </div>
