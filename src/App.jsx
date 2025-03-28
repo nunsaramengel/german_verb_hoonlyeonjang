@@ -37,7 +37,7 @@ function App() {
   
   
  
-  const LOGO_SIZE = "40"
+  const LOGO_SIZE = "30"
 
   const wrong = new Howl({
     src: ['/sounds/wrong.wav']
@@ -146,11 +146,11 @@ function App() {
   return (
     <div style={{width: "100vw", margin: "auto", padding: "0 40px"}}>
       <a href="mailto:sesaemdeutsch@gmail.com?subject=강변화동사%20훈련장%20Render">
-        <p style={{ fontSize: ".7rem", marginBottom: "50px" }}><img src={Logo} width={LOGO_SIZE} height={LOGO_SIZE} alt="logo 쎄쌤" style={{ marginRight: "15px", transform: "translateY(5px)" }} />
+        <p style={{ fontSize: ".5rem", marginBottom: "50px" }}><img src={Logo} width={LOGO_SIZE} height={LOGO_SIZE} alt="logo 쎄쌤" style={{ marginRight: "15px", transform: "translateY(5px)" }} lang="ko"/>
           &copy; 2025 쎄쌤독일어
         </p>
       </a>
-      {(begun && (<><h1>강변화동사 훈련장</h1><Score score={score} /></>))} 
+      {(begun && (<><h1 lang="ko">강변화동사 훈련장</h1><Score score={score} /></>))} 
       {currentVerb && <Verb question={currentVerb} isPastTense={isPastTense}></Verb>} {/* Render Verb only if currentVerb is not null */}
       {currentVerb && (
         <ResponseField 
@@ -160,18 +160,19 @@ function App() {
         />
 
       )}
-      {(!begun && <><TenseChoice isPastTense={isPastTense} setIsPastTense={setIsPastTense} /><button onClick={clickButton} className="enterTrainingGroundButton">강변화동사 훈련장에 입장하기</button></>)}
+      {(!begun && <><TenseChoice isPastTense={isPastTense} setIsPastTense={setIsPastTense} /><button onClick={clickButton} className="enterTrainingGroundButton" lang="ko">강변화동사 훈련장에 입장하기</button></>)}
       {(begun && <ShowWrongVerbs wrongVerbs={wrongVerbs} />)}
       <div style={{margin: "auto",  bottom: "1vh", width: "60vw",  backgroundColor: "transparent"}}>
         <p style={{
           color: "grey",
           textAlign: "left",
           backgroundColor: "transparent"
-        }}>
+        }}
+        lang="de">
         Sound & Music Attribution:
         <br />
           <div style={{backgroundColor: "transparent"}}>
-            <p style={{ fontSize: ".5rem", lineHeight: ".7rem", textAlign: "left", color: "grey", backgroundColor: "transparent" }}>
+            <p style={{ fontSize: ".5rem", lineHeight: ".7rem", textAlign: "left", color: "grey", backgroundColor: "transparent" }} lang="de">
               8-bit game-over by KSAplay -- https://freesound.org/s/758954/ -- License: Creative Commons 0 **
               8BIT Race music.mp3 by NYAN_CAT -- https://freesound.org/s/277363/ -- License: Attribution NonCommercial 3.0 **
               Short loop made in a few minutes with QWS and GoldWave by sonically_sound -- https://freesound.org/s/647908/ -- License: Attribution NonCommercial 4.0 **

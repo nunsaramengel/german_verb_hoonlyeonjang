@@ -317,7 +317,7 @@ export const verblist = {
     "helfen": {
         "infinitive": "helfen",
         "pastTense": "half",
-        "presentPerfect": "hat geholfen"
+        "presentPerfect": "geholfen"
     },
     "kennen": {
         "infinitive": "kennen",

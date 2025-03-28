@@ -31,12 +31,12 @@ const ResponseField = ({
           type="text"
           value={userInput}
           onChange={handleChange}
-          placeholder="위의 동사의 원형을 입력하세요"
-          style={{width: "360px"}}
+          style={{ width: "20vw", fontFamily: "yoon-px-pixelbatang, sans-serif" }}
+          lang="de"
         />
-        <button className="checkVerbButton" type="submit" style={{width: "200px", transform: "translate(-22px, -2px)"}}>검사</button>
+        <button className="checkVerbButton" type="submit" style={{width: "15vw", transform: "translate(-22px, -2px)", fontFamily: "yoon-px-pixelbatang, sans-serif"}} lang="ko">검사</button>
       </form>
-      {message && <p>{message}</p>}
+      {message && <p lang="ko">{message}</p>}
     </div>
   );
 };

@@ -9,12 +9,13 @@ const ShowWrongVerbs = ({ wrongVerbs }) => {
     }
     return (
         <div style={{zIndex: "100"}}>        
-            <button onClick={handleButtonClick}>{showWrongVerbs ? "복습할 동사 가리기" : '복습할 동사 보여주기'}</button>  
+            <button lang="ko" onClick={handleButtonClick}>{showWrongVerbs ? "복습할 동사 가리기" : '복습할 동사 보여주기'}</button>  
             <ul style={{ border: showWrongVerbs ? '2px solid #1ED3DF' : " " }}>
                 {showWrongVerbs && (wrongVerbs.map((verb, index) => (
                     <li
                         key={index}
                         style={{ color: index % 2 === 0 ? 'aquamarine' : 'mediumvioletred' }}
+                        lang="de"
                     >{verb}
                     </li>
                 )))}

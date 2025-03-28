@@ -21,9 +21,10 @@ const TenseChoice = ({ isPastTense, setIsPastTense }) => {
 
     return (
         <>
-            <div className="switch">
+            <div className="switch" lang="ko">
                 <label 
                     htmlFor="isPast" 
+                    lang="ko"
                     onClick={() => playSound(selectSound)}
                     style={{
                         color: isPastTense ? 'mediumvioletred' : 'lightseagreen',
@@ -39,6 +40,7 @@ const TenseChoice = ({ isPastTense, setIsPastTense }) => {
                         checked={isPastTense}
                         onChange={handleSelection}
                         id="isPast"
+                        lang="ko"
                     />
                     과거 시제
                 </label>
@@ -52,6 +54,7 @@ const TenseChoice = ({ isPastTense, setIsPastTense }) => {
                         margin: '10px 5px',
                         display: 'inline-block', // Ensure label behaves like a block element
                     }}
+                    label="ko"
                 >
                     <input
                         type="radio"
@@ -59,6 +62,7 @@ const TenseChoice = ({ isPastTense, setIsPastTense }) => {
                         checked={!isPastTense}
                         onChange={handleSelection}
                         id="!isPast"
+                        lang="ko"
                     />
                     현재완료 시제
                 </label>

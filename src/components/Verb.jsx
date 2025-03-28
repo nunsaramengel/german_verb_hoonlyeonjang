@@ -1,4 +1,5 @@
 import React from 'react'
+import "../styles/CurrentVerbStyles.css"
 
 const Verb = ({question, isPastTense}) => {
 
@@ -7,7 +8,7 @@ const Verb = ({question, isPastTense}) => {
 
   return (
     <div>
-      <h1 style={{color: "#1ED3DF", fontSize: "2.7rem"}} className="currentVerbStyles">
+      <h1 className="currentVerbStyles" lang="de">
         {isPastTense ? QUESTION.pastTense : QUESTION.presentPerfect}
       </h1>
     </div>

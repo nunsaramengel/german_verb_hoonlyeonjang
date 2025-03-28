@@ -8,6 +8,7 @@ input[type="radio"] {
   appearance: none;
   -webkit-appearance: none;
   width: 0px;
+  font-family: yoon-px-pixelbatang, sans-serif;
 }
 
 label:hover{
