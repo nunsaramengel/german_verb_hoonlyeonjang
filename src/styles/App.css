@@ -51,7 +51,6 @@ input:focus{
 .checkVerbButton{
   padding: 17px;
   margin-left: 15px;
-  transition-duration: 100ms;
   height: 63px;
 }
 

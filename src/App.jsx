@@ -118,11 +118,14 @@ function App() {
     const availableVerbs = arrayOfVerbs.filter(verbObj => !usedVerbs.has(verbObj.verb));
 
     if (availableVerbs.length === 0) {
-      alert("축하해요! 강변화 동사 전부 다 공부하셨어요!");
-      setUsedVerbs([]); // Reset the usedVerbs state
-        setTimeout(() => {
-          window.location.reload();
-        }, 100);
+
+      alert(`축하해요! 동사 ${Object.keys(verblist).length - wrongVerbs.length}개 맞았고 ${wrongVerbs.length}개 틀렸어요. 확인 누르시고 다시 도전해보실래요?`);
+      setUsedVerbs(new Set())
+      setWrongVerbs([]); // Reset the usedVerbs state
+      setScore(0)
+      setTimeout(() => {
+        window.location.reload();
+      }, 100);
       return;
     }
 
@@ -141,7 +144,6 @@ function App() {
   };
 
   const handleIncorrectAnswer = () => {
-    setScore(prevScore => Math.max(prevScore - SUBSTRACT_POINTS, 0))
     playSound(wrong)
     setWrongVerbs(prev => [...prev, currentVerb])
     clickButton()

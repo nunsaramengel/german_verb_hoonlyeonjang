@@ -15,6 +15,3 @@ label:hover{
     cursor: pointer;
 }
 
-label{
-    transition-duration: 300ms;
-}
