@@ -40,25 +40,19 @@ input[type="text"]{
   max-width: 90vw;
   width: 80vw;
   font-family: yoon-px-pixelbatang, sans-serif;
+  outline: none;
 }
 
 input:focus{
   color: mediumviolered;
 }
 
-input::placeholder{
-  font-weight: 100;
-  color: white;
-  font-family: yoon-px-pixelbatang, sans-serif;
-}
 
 .checkVerbButton{
   padding: 17px;
   margin-left: 15px;
   transition-duration: 100ms;
   height: 63px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
 }
 
 .checkVerbButton:hover{
@@ -79,6 +73,3 @@ input::placeholder{
   font-weight: 900;
 }
 
-input:active{
-  border-style: none;
-}

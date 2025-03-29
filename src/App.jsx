@@ -119,6 +119,10 @@ function App() {
 
     if (availableVerbs.length === 0) {
       alert("축하해요! 강변화 동사 전부 다 공부하셨어요!");
+      setUsedVerbs([]); // Reset the usedVerbs state
+        setTimeout(() => {
+          window.location.reload();
+        }, 100);
       return;
     }
 
