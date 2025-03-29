@@ -34,7 +34,7 @@ const ResponseField = ({
           style={{ width: "70vw", fontFamily: "yoon-px-pixelbatang, sans-serif" }}
           lang="de"
         />
-        <button className="checkVerbButton" type="submit" style={{width: "70vw",  fontFamily: "yoon-px-pixelbatang, sans-serif"}} lang="ko">검사</button>
+        <button className="checkVerbButton" type="submit" style={{width: "70vw",  fontFamily: "yoon-px-pixelbatang, sans-serif", transform: "translateX(-7px)"}} lang="ko">검사</button>
       </form>
       {message && <p lang="ko">{message}</p>}
     </div>
