@@ -57,11 +57,9 @@ input:focus{
 
 .checkVerbButton:hover{
   background-color: purple;
+    border: solid purple 4px;
 }
 
-.checkVerbButton:active{
-  border: none;
-}
 
 [lang="de"]{
   font-family: cofo-sans-pixel, sans-serif;
