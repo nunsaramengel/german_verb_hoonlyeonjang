@@ -68,7 +68,8 @@ const ResponseField = ({
     };
 
     return (
-        <Container>
+      <Container>
+            {message && <Message lang="ko">{message}</Message>}
             <Form onSubmit={handleSubmit}>
                 <Input
                     type="text"
@@ -78,7 +79,7 @@ const ResponseField = ({
                 />
                 <Button className="checkVerbButton" type="submit" lang="ko">검사</Button>
             </Form>
-            {message && <Message lang="ko">{message}</Message>}
+
         </Container>
     );
 };
