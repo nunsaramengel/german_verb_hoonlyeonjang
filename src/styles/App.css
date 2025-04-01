@@ -1,7 +1,7 @@
-*{
+* {
   background-color: #121212;
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.3rem; /* Default font size */
   box-sizing: border-box;
 }
 
@@ -11,62 +11,62 @@
   width: 100vw;
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
+  background-color: purple;
+  border: solid purple 4px;
 }
 
-
-button{
-  border: none;
+button {
   background-color: mediumvioletred;
   color: white;
-  padding: 10px 16px;
-  font-size: 1rem;
+  font-size: 1rem; /* Default font size */
   font-family: yoon-px-pixelbatang, sans-serif;
   border: solid mediumvioletred 4px;
 }
 
-button:active{
-  border-left: solid px ivory;
-  border-top: solid 1px ivory;
-  padding-bottom: 9px;
-  padding-left: 15px;
+button:active {
+background-color: transparent;
+color: mediumvioletred;
+border: solid 4px transparent;
 }
 
-input[type="text"]{
+input[type="text"] {
   border: solid mediumvioletred 4px;
-  padding: 10px 16px;
+  padding: 10px 16px; /* Default padding */
   margin-bottom: 13px;
-  max-width: 90vw;
-  width: 80vw;
+  max-width: 100%;
+  width: 100%;
   font-family: yoon-px-pixelbatang, sans-serif;
   outline: none;
 }
 
-input:focus{
-  color: mediumviolered;
+input:focus {
+  color: mediumvioletred; /* Fixed typo */
 }
 
 
-.checkVerbButton{
-  padding: 17px;
-  margin-left: 15px;
-  height: 63px;
-}
 
-.checkVerbButton:hover{
-  background-color: purple;
-    border: solid purple 4px;
-}
-
-
-[lang="de"]{
+[lang="de"] {
   font-family: cofo-sans-pixel, sans-serif;
   font-weight: 900;
 }
 
-[lang="ko"]{
+[lang="ko"] {
   font-family: yoon-px-pixelbatang, sans-serif;
   font-weight: 900;
 }
 
+/* Media query for mobile screens */
+@media (max-width: 600px) {
+  * {
+    font-size: 1rem; /* Adjusted font size for mobile */
+  }
+
+  input[type="text"] {
+    padding: 8px 12px; /* Adjusted padding for mobile */
+    font-size: 0.875rem; /* Adjusted font size for mobile */
+  }
+
+
+}
